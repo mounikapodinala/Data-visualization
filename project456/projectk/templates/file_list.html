@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excel Files List</title>
+</head>
+<body>
+    <h2>Excel Files List</h2>
+    <ul>
+        {% for file in files %}
+            <li><a href="{{ url_for('visualize_file', filename=file.filename) }}">{{ file.filename }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Upload New Excel File</h2>
+    <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx">
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>

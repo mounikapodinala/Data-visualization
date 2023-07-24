@@ -1,0 +1,42 @@
+/* Navbar */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #371bd3;
+  }
+  
+  .navbar li {
+    float: left;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar li a:hover {
+    background-color: #3a18a9;
+  }
+  /* index.css */
+
+.navbar li:nth-child(1) a {
+    background-image: url("../static/enter_data_logo.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 40px; /* Adjust as needed */
+}
+
+.navbar li:nth-child(2) a {
+    background-image: url("../static/view_data_logo.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding-left: 40px; /* Adjust as needed */
+}
+
+  
+  
